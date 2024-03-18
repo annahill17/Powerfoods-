@@ -21,7 +21,7 @@ col{
     color:white;
 }
 footer{
-    background-color:black;
+    background-color: rgb(7, 159, 253);
     -moz-box-align: center;
 }
 .contact {
@@ -203,4 +203,12 @@ div1{
     border: 3px solid white;
     padding: 4px;
     margin: auto;
+}
+// Initialization for ES Users
+import { Ripple, initMDB } from "mdb-ui-kit";
+
+initMDB({ Ripple });
+
+.mb-4{
+  color: blue;
 }
