@@ -21,7 +21,7 @@ col{
     color:white;
 }
 footer{
-    background-color: rgb(7, 159, 253);
+    background-color: lightskyblue;
     -moz-box-align: center;
 }
 .contact {
@@ -204,11 +204,31 @@ div1{
     padding: 4px;
     margin: auto;
 }
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(214, 199, 199);
+  color: rgb(19, 3, 3);
+  text-align: center;
+}
+</style>
+
+<div class="footer">
+  <p>Footer</p>
+</div>
+
 // Initialization for ES Users
 import { Ripple, initMDB } from "mdb-ui-kit";
 
 initMDB({ Ripple });
 
-.mb-4{
-  color: blue;
+.rampart-one-regular {
+  font-family: "Rampart One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
+
+
+
