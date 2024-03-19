@@ -21,7 +21,8 @@ col{
     color:white;
 }
 footer{
-    background-color:black;
+    background-color: lightskyblue;
+    -moz-box-align: center;
 }
 .contact {
     border-color: #e7e7e7;
@@ -38,6 +39,7 @@ footer{
     width: 50%;
     border: 3px solid white;
     padding: 10px;
+    margin: auto;
   }
   
   .product:hover {
@@ -56,7 +58,8 @@ footer{
 #b2{
   text-align: right;
 }
-lor{ #04AA6D;
+lor{ 
+  color: #04AA6D;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -124,3 +127,108 @@ h3{
 label1{
   color: white;
 }
+
+label3{
+  color:white;
+}
+label2{
+  color: white;
+}
+label4{
+  color: white;
+}
+label5{
+  color: white;
+}
+h6{
+  color: black;
+}
+h7{
+  color: black;
+}
+img{
+  height: 200px
+}
+p{
+  color: black
+}
+#ff{
+    position: fixed;
+    left:0%;
+    right: 0%;
+}
+.fda{
+  color: #e7e7e7;
+  text-align: right;
+}
+p1{
+  color: white;
+}
+p5{
+  color: white;
+}
+p6{
+  color: white;
+}
+label5{
+  color: white;
+  text-align: center;
+}
+div3{
+  color: white;
+}
+label7{
+  color: white;
+}
+div2{
+  color: white;
+}
+label7{
+  color: white;
+}
+div2{
+  color: white;
+}
+label8{
+  color: white;
+}
+div1{
+  color: white;
+}
+.checkout{
+  border-color: #e7e7e7;
+    color: white;
+    margin: auto;
+    width: 20%;
+    border: 3px solid white;
+    padding: 4px;
+    margin: auto;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(214, 199, 199);
+  color: rgb(19, 3, 3);
+  text-align: center;
+}
+</style>
+
+<div class="footer">
+  <p>Footer</p>
+</div>
+
+// Initialization for ES Users
+import { Ripple, initMDB } from "mdb-ui-kit";
+
+initMDB({ Ripple });
+
+.rampart-one-regular {
+  font-family: "Rampart One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
