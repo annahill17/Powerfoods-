@@ -1,39 +1,15 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PowerFoods</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">PowerFoods</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="products.html">Products</a>
-            <a class="nav-link" href="contact.html">Contact Us</a>
-            <a class="nav-link" href="signup.html">Sign Up!</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <div class="container text-center">
-      <div class="row align-items-start">
-        <div class="col">
-          <div class="container">
-            <div class="zoom">
-                 <img id="img1" src="img/image-removebg-preview.jpg" alt="PowerFoods"> 
-               </div> 
-               </div>
+<?php
+  include_once 'includes/dbh.inc.php';
+
+?>
+<body>
+<?php
+  include 'includes/header.php';
+
+?>
+
+
+
              <style>
                .zoom {
                  padding: 50px;
@@ -43,20 +19,7 @@
                  height: 50px;
                  margin: 0 auto;
                }
-               
-               .zoom:hover {
-                 transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-               }
                </style>
-        </div>
-        <div class="col">
-          One of three columns
-        </div>
-        <div class="col">
-          One of three columns
-        </div>
-      </div>
-    </div>
     <div class="container text-center">
       <div class="row align-items-end">
         <div class="col">
@@ -67,14 +30,6 @@
     
           <br>
         </div>
-        <div class="col">
-          One of three columns
-        </div>
-        <div class="col">
-          One of three columns
-        </div>
-      </div>
-    </div>
       
 
         <center><a href="products.html" class="btn product">Shop With Us!</a></center>
@@ -151,6 +106,19 @@
     © 2020 Copyright:
     <a class="text-body" href="https://mdbootstrap.com/">MDBootstrap.com</a>
   </div>
+  <?php
+
+      $sql = "SELECT * FROM users;";
+      $result = mysqli_query($conn, $sql);
+      $resultCheck = mysqli_num_rows($result);
+     
+      if ($resultCheck > 0){
+          while ($row = mysqli_fetch_assoc($result)) {
+              echo $row['user_first'] . "<br>";
+        }
+
+      }
+?>
   <!-- Copyright -->
   </footer>
 </br>  

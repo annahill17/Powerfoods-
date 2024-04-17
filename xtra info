@@ -82,3 +82,23 @@
           <a href="checkout.html" class="checkout">Checkout</a>
     
     </div>
+
+
+    .zoom:hover {
+      transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+
+    <?php
+    include 'includes/header.php';
+  
+  ?>
+
+
+  <div class="footer">
+    <p>Footer</p>
+  </div>
+  
+  // Initialization for ES Users
+  import { Ripple, initMDB } from "mdb-ui-kit";
+  
+  initMDB({ Ripple });
