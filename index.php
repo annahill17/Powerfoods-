@@ -1,7 +1,4 @@
-<?php
-  include_once 'includes/dbh.inc.php';
 
-?>
 <body>
 <?php
   include 'includes/header.php';
