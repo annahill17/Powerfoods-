@@ -102,3 +102,10 @@
   import { Ripple, initMDB } from "mdb-ui-kit";
   
   initMDB({ Ripple });
+
+
+
+
+  <?php
+  require "header.php";
+  ?>

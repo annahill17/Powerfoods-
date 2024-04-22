@@ -1,8 +1,4 @@
-<?php
-require "header.php";
-?>
-
-          <main>
+        <main>
             <div class="wrapper-main">
               <section class="section-default">
                 <h1>Signup</h1>
@@ -14,6 +10,5 @@ require "header.php";
                   <button type="submit" name="signup-submit">Signup</button>
                 </form>
               </section>
-             
             </div>
           </main>

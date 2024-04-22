@@ -14,3 +14,5 @@ VALUES ('$first', '$last', '$email', '$uid', '$pwd');";
 
   header("Location: ../index.php?signup=success");
 ?>
+<?php
+

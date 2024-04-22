@@ -32,9 +32,7 @@
         <center><a href="products.html" class="btn product">Shop With Us!</a></center>
   </div>
 
-  <?php
-require "header.php";
-?>
+
 
           <main>
             <div class="wrapper-main">
