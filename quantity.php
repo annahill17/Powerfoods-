@@ -1,5 +1,4 @@
-<body>
-    <h1>Shopping Cart</h1>
+<h1>Shopping Cart</h1>
 
     <?php
   include 'includes/header.php';

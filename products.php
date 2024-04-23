@@ -1,6 +1,4 @@
-  <div class="container text-center">
-    <body>
-    <?php
+ <?php
   include 'includes/header.php';
 
 ?>

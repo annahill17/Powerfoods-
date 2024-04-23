@@ -13,4 +13,5 @@ VALUES ('$first', '$last', '$email', '$uid', '$pwd');";
   mysqli_query($conn, $sql);
 
   header("Location: ../index.php?signup=success");
-?>
+
+

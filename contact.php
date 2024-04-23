@@ -1,6 +1,4 @@
-
-<body>
-  <?php
+ <?php
   include 'includes/header.php';
 
 ?>

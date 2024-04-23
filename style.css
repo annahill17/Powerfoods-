@@ -218,4 +218,6 @@ div1{
   font-weight: 400;
   font-style: normal;
 }
-
+.header.logo{
+  height:1px;
+}
