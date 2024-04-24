@@ -1,4 +1,5 @@
 <?php
+ include 'includes/header.php';
 if (isset($_POST['signup-submit'])) {
 
   require 'dbh.inc.php';
@@ -8,29 +9,29 @@ if (isset($_POST['signup-submit'])) {
   $password = $_POST['pwd'];
   $passwordRepeat = $_POST['pwd-repeat'];
 
-  if (empty($username) || empty($email) || empty($password) || empty($passwordRepeat));{
+  if (empty($username) || empty($email) || empty($password) || empty($passwordRepeat)) {
     header("Location: ../signup.php?error=emptyfields&uid=".$username."$mail=".$email);
     exit();
 }
-else if (!filter_var($email, FILTER_VALIDATE_EMAIL) && !preg_match("/^[a-zA-Z0-9]*$/ ", $username)) {
-  header("Location: ../signup.php?error=invalidmailuid");
-    exit();
+else if (!filter_var($email, FILTER_VALIDATE_EMAIL) && !preg_match("/^[a-zA-Z0-9]*$/ ")) {
+  header("Location: ../signup.php?error=invalidmail&uid=".$username);
+  exit();
 }
 else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
   header("Location: ../signup.php?error=invalidmail&uid=".$username);
     exit();
 }
-else if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
+else if (!preg_match("/^[a-zA-Z0-9]*$/ ", $username)) {
   header("Location: ../signup.php?error=invaliduid&mail=".$email);
     exit();
 }
-else if ($password !== $passwordRepeat)) {
-  header("Location: ../signup.php?error=passwordcheckuid=".$username."&mail=".$email);
+else if ($password !== $passwordRepeat) {
+  header("Location: ../signup.php?error=passwordcheck&uid=".$username."&mail=".$email);
     exit();
 }
 else{
 
-  $sql = "SELECT uidUsers FROM users WHERE uidUser=?";
+  $sql = "SELECT user_uid FROM users WHERE user_uid=?";
   $stmt = mysqli_stmt_init($conn);
   if (!mysqli_stmt_prepare($stmt, $sql)){
     header("Location: ../signup.php?error=sqlerror");
@@ -47,7 +48,7 @@ else{
     }
     else{
 
-      $sql = "INSERT INTO users (uidUsers, emailUsers, pwdUsers) VALUES (?,?,?)";
+      $sql = "INSERT INTO users (user_uid, user_email, user_pwd) VALUES (?,?,?)";
       $stmt = mysqli_stmt_init($conn);
       if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("Location: ../signup.php?error=sqlerror");

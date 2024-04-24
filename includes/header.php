@@ -35,15 +35,17 @@
         <li class="nav-item">
           <a class="nav-link" href="checkout.php">Checkout</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="signup.php">Signup</a>
+        </li>
       </ul>
       <form action="includes/login.inc.php" method="post"> 
     <input type="text" name="mailuid" placeholder="Username/E-mail...">
     <input type="password" name="pwd" placeholder="Password...">
     <button type="submit" name="Login-submit">Login</button>
   </form>
-  <a href="signup.php">Signup</a>
   <form action="includes/logout.inc.php" method="post"> 
-    <button type="submit" name="Logout-submit">Logout</button>
+    <button type="submit" name="logout-submit">Logout</button>
   </form>
     </div>
   </div>
