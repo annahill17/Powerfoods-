@@ -12,17 +12,8 @@
     
           <br>
         </div>
-      
-
         <center><a href="products.html" class="btn product">Shop With Us!</a></center>
   </div>
-          <main>
-            <div class="wrapper-main">
-              <section class="section-default"></section>
-                 <p class="login-status">You are logged out!</p>
-                 <p class="login-status">You are logged in!</p>
-            </div>
-          </main>
   <footer class="bg-body-tertiary text-center">
     <!-- Grid container -->
     <div class="container p-4 pb-0">
@@ -97,18 +88,5 @@
   </div>
   <!-- Copyright -->
   </footer>
-</br>  
-<?php
- $sql = "SELECT * FROM users;";
- $result = mysqli_query($conn, $sql);
- $resultCheck = mysqli_num_rows($result);
-
- if ($resultCheck > 0){
-     while ($row = mysqli_fetch_assoc($result)) {
-         echo $row['user_first'] . "<br>";
-   }
-
- }
-?>
-</body> 
+  </body> 
 </html>

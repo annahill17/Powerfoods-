@@ -20,10 +20,10 @@ else{
     }
     else{
 
-        mysqli_stmt_bind_param($stmt, "ss", $mailuid, $passworf);
+        mysqli_stmt_bind_param($stmt, "ss", $mailuid, $mailuid);
         mysqli_stmt_execute($stmt);
         $result = mysqli_stmt_get_result($stmt);
-        if ($row = mysqli_fetch_assoc()) {
+        if ($row = mysqli_fetch_assoc($result)) {
           $pwdCheck = password_verify($password, $row['user_pwd']);
           if ($pwdCheck == false) {
             header("Location: ../index.php?error=wrongpwd");
@@ -31,7 +31,11 @@ else{
           }
           else if ($pwdCheck == true) {
             session_start();
-            $_SESSION[] = $row['']
+            $_SESSION['userId'] = $row['user_id'];
+            $_SESSION['useruid'] = $row['user_uid'];
+
+            header("Location: ../index.php?login=success");
+            exit();
           }
           else {
             header("Location: ../index.php?error=wrongpwd");

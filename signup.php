@@ -1,4 +1,9 @@
-        <main>
+<?php
+  include 'includes/header.php';
+?>
+
+
+<main>
             <div class="wrapper-main">
               <section class="section-default">
                 <h1>Signup</h1>

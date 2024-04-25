@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -50,7 +53,14 @@
     </div>
   </div>
 </nav>
-      
+<main>
+    <div class="wrapper-main">
+      <section class="section-default">
+      <p class="login-status">You are logged out!</p>
+      <p class="login-status">You are logged in!</p>
+        </section>
+    </div>
+</main>
 </div>
 </nav>
  </header>
