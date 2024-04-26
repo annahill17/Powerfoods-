@@ -42,6 +42,7 @@
           <a class="nav-link" href="signup.php">Signup</a>
         </li>
       </ul>
+      <div class ="header-login">
       <form action="includes/login.inc.php" method="post"> 
     <input type="text" name="mailuid" placeholder="Username/E-mail...">
     <input type="password" name="pwd" placeholder="Password...">
@@ -50,14 +51,20 @@
   <form action="includes/logout.inc.php" method="post"> 
     <button type="submit" name="logout-submit">Logout</button>
   </form>
-    </div>
+  </div>
   </div>
 </nav>
 <main>
     <div class="wrapper-main">
       <section class="section-default">
-      <p class="login-status">You are logged out!</p>
-      <p class="login-status">You are logged in!</p>
+        <?php
+          if (isset($_SESSION['userId'])) {
+            echo '<p class="login-status">You are logged in!</p>';
+          }
+          else {
+            echo '<p class="login-status">You are logged out!</p>';
+          }
+        ?>
         </section>
     </div>
 </main>

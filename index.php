@@ -9,10 +9,16 @@
         <h5>Our company creates food that is designed for your choice of power ups! Our food is designed especially for you! Every bite taken out of your food is magically delicious. We are here to give you the assistance you need in order to purchase any items. If you have any questions about our product, what our product does, or anything at all please send us an email!</h5>
         <br>
         <h5> All of our food is FDA approved! It is safe and only lasts a couple hours!</h5>
-    
-          <br>
+    <?php
+     if (isset($_SESSION['user_id'])) {
+      echo '<p class="login-status">You are logged in!</p>';
+    }
+    else {
+      echo '<p class="login-status">You are logged out!</p>';
+    }
+    ?>
         </div>
-        <center><a href="products.html" class="btn product">Shop With Us!</a></center>
+    <center><a href="products.html" class="btn product">Shop With Us!</a></center>
   </div>
   <footer class="bg-body-tertiary text-center">
     <!-- Grid container -->
